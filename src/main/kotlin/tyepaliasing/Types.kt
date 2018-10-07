@@ -5,12 +5,12 @@ import java.util.Currency
 fun causallyGreet(person: String): String {
     return "Hello $person!"
 }
-fun formallyGreet(person: String, honorific: String): String {
+fun formallyGreet(person: Person, honorific: Honorific): String {
     return "Greetings $honorific $person."
 }
 
-
-
+typealias Person = String
+typealias Honorific = String
 
 
 
