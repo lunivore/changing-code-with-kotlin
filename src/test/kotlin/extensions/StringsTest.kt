@@ -9,19 +9,18 @@ class StringsTest {
     @Test
     fun `strings should be able to tell us if they are palindromes`() {
         // simple palindrome
-        assertTrue("bob".isPalindrome)
-        // not a palindrome
-        assertFalse("darren".isPalindrome)
+//        assertTrue("bob".isPalindrome())
+        // not a palindrome, switch to property style
+//        assertFalse("darren".isPalindrome)
         // edge case, let's say the empty string is a palindrome
-        assertTrue("".isPalindrome)
+//        assertTrue("".isPalindrome)
         // but null is not
-        assertFalse(null.isPalindrome)
+//        assertFalse(null.isPalindrome)
         // ignore case
-        assertTrue("Bob".isPalindrome)
+//        assertTrue("Bob".isPalindrome)
     }
 }
 
-private val String?.isPalindrome: Boolean get() {
-    if (this == null) return false
-    return this.reversed().equals(this, true)
+private fun String.isPalindrome(): Boolean {
+    TODO()
 }
