@@ -9,7 +9,7 @@ class StringsTest {
     @Test
     fun `strings should be able to tell us if they are palindromes`() {
         assertTrue("bob".isPalindrome())
-//        assertFalse("darren".isPalindrome())
+        assertFalse("darren".isPalindrome())
 //        assertFalse(null.isPalindrome())
 //        assertTrue("".isPalindrome())
 //        assertTrue("Bob".isPalindrome())
@@ -17,5 +17,5 @@ class StringsTest {
 }
 
 private fun String.isPalindrome(): Boolean {
-    return true
+    return this.reversed() == this
 }
