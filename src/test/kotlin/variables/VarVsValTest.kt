@@ -9,7 +9,7 @@ class VarVsValTest {
     fun `should demonstrate the difference between var and val`() {
         val theThing = VarVsVal("Mutable", 10)
 
-        theThing.immutableValue = 20 // Cannot change a val property
+//        theThing.immutableValue = 20 // Cannot change a val property
 
         theThing.mutableValue = "Changed!"
 
@@ -19,6 +19,6 @@ class VarVsValTest {
 
         assertThat(copyOfTheThing.immutableValue, equalTo(20))
 
-        copyOfTheThing = VarVsVal("New copy", 30) // Cannot reassign a val
+//        copyOfTheThing = VarVsVal("New copy", 30) // Cannot reassign a val
     }
 }
