@@ -1,0 +1,74 @@
+group 'lunivore.com'
+version '0.0.1'
+
+buildscript {
+    ext.kotlinVersion = '1.2.61'
+    ext.junitVersion  = '4.12'
+    ext.log4jVersion = '2.8.2'
+    ext.mockitoVersion = '1.10.19'
+    ext.cucumberJava8Version = '2.4.0'
+    ext.cucumberPicocontainerVersion = '2.4.0'
+    ext.cucumberJUnitVersion = '2.4.0'
+
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'kotlin'
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    maven {
+        url "https://oss.sonatype.org/content/repositories/snapshots"
+    }
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+sourceSets {
+    scenarios {
+        kotlin {
+            compileClasspath += main.output + test.output
+            runtimeClasspath += main.output + test.output
+            srcDir file('src/scenarios/kotlin')
+            resources.srcDirs = ["src/scenarios/resources"]
+        }
+    }
+}
+
+compileKotlin {
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+
+dependencies {
+
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
+    compile "org.apache.logging.log4j:log4j-api:$log4jVersion"
+    compile "org.apache.logging.log4j:log4j-core:$log4jVersion"
+    compile 'io.vertx:vertx-web-client:3.5.3'
+
+    testCompile "junit:junit:$junitVersion"
+    testCompile "org.mockito:mockito-all:$mockitoVersion"
+    testCompile 'io.vertx:vertx-web-client:3.5.3'
+
+    testRuntime "junit:junit:$junitVersion"
+
+    scenariosCompile "junit:junit:$junitVersion"
+    scenariosCompile "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
+    scenariosCompile "io.cucumber:cucumber-junit:$cucumberJUnitVersion"
+    scenariosCompile "io.cucumber:cucumber-java8:$cucumberJava8Version"
+    scenariosCompile "io.cucumber:cucumber-picocontainer:$cucumberPicocontainerVersion"
+    scenariosCompile "org.apache.logging.log4j:log4j-api:$log4jVersion"
+    scenariosCompile "org.apache.logging.log4j:log4j-core:$log4jVersion"
+
+    scenariosRuntime "junit:junit:$junitVersion"
+}
