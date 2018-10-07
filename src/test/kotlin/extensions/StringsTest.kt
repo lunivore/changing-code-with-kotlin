@@ -11,11 +11,12 @@ class StringsTest {
         assertTrue("bob".isPalindrome)
         assertFalse("darren".isPalindrome)
         assertTrue("".isPalindrome)
-//        assertFalse(null.isPalindrome())
-//        assertTrue("Bob".isPalindrome())
+        assertFalse(null.isPalindrome)
+//        assertTrue("Bob".isPalindrome)
     }
 }
 
-private val String.isPalindrome: Boolean get() {
+private val String?.isPalindrome: Boolean get() {
+    if (this == null) return false
     return this.reversed() == this
 }
