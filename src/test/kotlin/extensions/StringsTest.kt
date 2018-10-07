@@ -16,6 +16,6 @@ class StringsTest {
     }
 }
 
-private fun String?.isPalindrome(): Boolean {
-    return this?.let { reversed().equals(this, true) } ?: false
-}
+//private fun String?.isPalindrome(): Boolean {
+//    return true
+//}
