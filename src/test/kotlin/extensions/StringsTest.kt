@@ -8,14 +8,14 @@ class StringsTest {
 
     @Test
     fun `strings should be able to tell us if they are palindromes`() {
-        assertTrue("bob".isPalindrome())
-        assertFalse("darren".isPalindrome())
+        assertTrue("bob".isPalindrome)
+        assertFalse("darren".isPalindrome)
+        assertTrue("".isPalindrome)
 //        assertFalse(null.isPalindrome())
-//        assertTrue("".isPalindrome())
 //        assertTrue("Bob".isPalindrome())
     }
 }
 
-private fun String.isPalindrome(): Boolean {
+private val String.isPalindrome: Boolean get() {
     return this.reversed() == this
 }
