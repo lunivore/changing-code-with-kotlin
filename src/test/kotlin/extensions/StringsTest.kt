@@ -8,6 +8,10 @@ class StringsTest {
 
     @Test
     fun `strings should be able to tell us if they are palindromes`() {
+
+        assertTrue(isPalindrome("xyx"))
+
+
         // simple palindrome
 //        assertTrue("bob".isPalindrome())
         // not a palindrome, switch to property style
@@ -21,6 +25,6 @@ class StringsTest {
     }
 }
 
-private fun String.isPalindrome(): Boolean {
-    TODO()
+private fun isPalindrome(aString: String): Boolean {
+    TODO("Write the code")
 }
