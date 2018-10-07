@@ -9,8 +9,23 @@ fun formallyGreet(person: Person, honorific: Honorific): String {
     return "Greetings $honorific $person."
 }
 
-typealias Person = String
-typealias Honorific = String
+data class Person(val name: String) {
+    override fun toString(): String {
+        return name
+    }
+}
+
+data class Honorific(val value: String) {
+    override fun toString(): String {
+        return value
+    }
+}
+
+
+
+
+
+
 
 
 
