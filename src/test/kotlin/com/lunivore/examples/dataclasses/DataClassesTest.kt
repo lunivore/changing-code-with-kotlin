@@ -9,7 +9,10 @@ data class SimpleThing(val id: String, val name: String)
 class DataClassesTest {
     @Test fun `should demonstrate data classes`() {
         // Normal constructor
-        val exampleA = SimpleThing("123", "aName")
+//        assertThat(exampleA.toString(), equalTo("SimpleThing(id=123, name=aName)"))
+
+
+
 
         // Named params (out of order)
 
@@ -21,6 +24,5 @@ class DataClassesTest {
 
 //        assertThat(exampleC, equalTo(exampleA))
 
-        assertThat(exampleA.toString(), equalTo("SimpleThing(id=123, name=aName)"))
     }
 }
