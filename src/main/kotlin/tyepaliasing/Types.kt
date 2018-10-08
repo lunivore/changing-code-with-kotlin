@@ -2,7 +2,7 @@ package tyepaliasing
 
 import java.util.Currency
 
-fun causallyGreet(person: Person): String {
+fun casuallyGreet(person: Person): String {
     return "Hello $person!"
 }
 fun formallyGreet(person: Person, honorific: Honorific): String {
