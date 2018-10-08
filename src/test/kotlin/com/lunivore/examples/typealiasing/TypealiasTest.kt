@@ -3,8 +3,8 @@ package com.lunivore.examples.typealiasing
 import com.natpryce.hamkrest.assertion.assertThat
 import com.natpryce.hamkrest.equalTo
 import org.junit.Test
-import tyepaliasing.casuallyGreet
-import tyepaliasing.formallyGreet
+import com.lunivore.examples.tyepaliasing.casuallyGreet
+import com.lunivore.examples.tyepaliasing.formallyGreet
 
 class TypealiasTest {
     @Test fun `casual greeting should greet casually`() {

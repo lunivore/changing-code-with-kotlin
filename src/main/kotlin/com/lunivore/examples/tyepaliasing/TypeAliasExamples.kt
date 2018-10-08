@@ -1,4 +1,4 @@
-package tyepaliasing
+package com.lunivore.examples.tyepaliasing
 
 import java.util.Currency
 
@@ -11,6 +11,13 @@ fun formallyGreet(person: String, honorific: String): String {
 
 //typealias Person = String
 //typealias Honorific = String
+
+
+
+
+
+
+
 
 
 
