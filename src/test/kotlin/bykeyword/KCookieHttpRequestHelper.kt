@@ -40,16 +40,16 @@ class ThingThatDoesSomethingWithHeadersTest {
 /**
  * It would be much easier if we could just use a real hashmap for the cookies.
  */
-class KCookieHttpRequestHelper() : HttpRequest<Any> {
-    private val headers = MultiMap.caseInsensitiveMultiMap()
-
-    override fun headers(): MultiMap {
-        return headers
-    }
-
-    override fun putHeader(name: String, value: String): HttpRequest<T> {
-        headers.add(name, value)
-        return this
-    }
-
-}
+//class KCookieHttpRequestHelper() : HttpRequest<Any> {
+//    private val headers = MultiMap.caseInsensitiveMultiMap()
+//
+//    override fun headers(): MultiMap {
+//        return headers
+//    }
+//
+//    override fun putHeader(name: String, value: String): HttpRequest<T> {
+//        headers.add(name, value)
+//        return this
+//    }
+//
+//}

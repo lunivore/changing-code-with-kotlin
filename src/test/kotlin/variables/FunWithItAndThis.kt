@@ -8,7 +8,7 @@ class FunWithItAndThis {
     @Test
     fun `should see how long we can go without a variable other than it and this`() {
         val pipedInts = with(listOf(1, 2, 3)) {
-            this.joinToString ("|")
+            this.joinToString("|")
         }
 
         assertThat(pipedInts, equalTo("1|2|3"))
@@ -16,8 +16,11 @@ class FunWithItAndThis {
         val commaSeparated = listOf("a", "b", "c")
             .map { it.toUpperCase() }
 //            .map{ String::toString } // Common pitfall {} instead of ()
-            .run { this.sorted().reversed() }
-            .run { this.joinToString(",") }
+            .run {
+                sorted()
+                    .reversed()
+                    .joinToString(",")
+            }
 
         assertThat(commaSeparated, equalTo("C,B,A"))
     }
