@@ -15,10 +15,5 @@ class VarVsValTest {
 
         assertThat(theThing.mutableValue, equalTo("Changed!"))
 
-        val copyOfTheThing = theThing.copy(immutableValue = 20)
-
-        assertThat(copyOfTheThing.immutableValue, equalTo(20))
-
-//        copyOfTheThing = VarVsVal("New copy", 30) // Cannot reassign a val
     }
 }

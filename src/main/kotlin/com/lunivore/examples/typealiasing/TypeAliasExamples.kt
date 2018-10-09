@@ -1,4 +1,4 @@
-package com.lunivore.examples.tyepaliasing
+package com.lunivore.examples.typealiasing
 
 import java.util.Currency
 
